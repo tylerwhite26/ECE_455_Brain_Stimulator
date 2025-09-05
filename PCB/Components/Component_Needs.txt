@@ -1,0 +1,15 @@
+General Component Needs (Add links as you find them):
+
+MCU/FPGA
+DAC
+ADC
+Switches
+	Hard Kill Switch
+	Soft Kill Switch
+Electrode Connectors
+Transformer
+Boost Converter
+Amplifier (Or parts for)
+Voltage Regulator for MCU
+Power Source (Battery)
+Charging Port
