@@ -2,14 +2,26 @@ General Component Needs (Add links as you find them):
 
 MCU/FPGA
 DAC
+https://www.digikey.com/en/products/detail/microchip-technology/MCP4716A0T-E-CH/2665070 -- 6us settling time, aiming for 5 but fine
+https://www.digikey.com/en/products/detail/analog-devices-inc/LTC2631CTS8-LM10-TRMPBF/1931329
+https://www.digikey.com/en/products/detail/microchip-technology/MCP4811T-E-MS/2342415 -- Uses SPI, SPI might be necessary
 ADC
+https://www.digikey.com/en/products/detail/texas-instruments/ADC101S021CIMFX-NOPB/1870668 -- SPI ADC
+https://www.digikey.com/en/products/detail/texas-instruments/ADC101S051CIMF-NOPB/953335 -- Higher sample rate of the same one
 Switches
 	Hard Kill Switch
+	https://www.digikey.com/en/products/detail/e-switch/100SP1T2B4M6QE/378831
 	Soft Kill Switch
+	https://www.digikey.com/en/products/detail/nkk-switches/BB16AH-FA/1057151
 Electrode Connectors
+	TBD
 Transformer
+Maybe https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74485540220/4155893 -- ask for assistance
 Boost Converter
+https://www.digikey.com/en/products/detail/diodes-incorporated/AZ34063UMTR-G1/4471007 -- Need to look more into this
 Amplifier (Or parts for)
 Voltage Regulator for MCU
+https://www.digikey.com/en/products/detail/diodes-incorporated/AZ1117CH-5-0TRG1/4470986 -- Here's a 5V, these are pretty easy to find
 Power Source (Battery)
 Charging Port
+https://www.digikey.com/en/products/detail/amphenol-cs-commercial-products/GSB3C3133DS1HR/21623860 -- Will be MCU dependent, here's usb-c
