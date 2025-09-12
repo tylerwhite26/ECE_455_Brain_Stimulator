@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-09-02" view-index="1" gantt-divider-location="297" resource-divider-location="300" version="3.3.3316" locale="en_US">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="167" order="0"/>
+        <field id="tpd4" name="Begin date" width="65" order="1"/>
+        <field id="tpd5" name="End date" width="64" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <timeline><![CDATA[1]]></timeline>
+        <option id="color.recent"><![CDATA[#f4f4f4]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="199" order="0"/>
+        <field id="1" name="Default role" width="82" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" uid="b3f11a46b870479cba41ad06ebcd593d" name="Component Sourcing" color="#8cb6ce" meeting="false" start="2025-09-05" duration="11" complete="0" expand="true"/>
+        <task id="2" uid="83e8ba7ad8004953bbc1344b85420b32" name="Schematic and Symbol Creation" meeting="false" start="2025-09-12" duration="9" complete="0" expand="true"/>
+        <task id="9" uid="cce9220a46a8416fbf1cccfa8aa244e4" name="Simulation" meeting="false" start="2025-09-12" duration="6" complete="0" expand="true"/>
+        <task id="3" uid="899ebb58e7a4432cbb9593c3efaf984b" name="PCB Layout" meeting="false" start="2025-09-17" duration="11" complete="0" expand="true"/>
+        <task id="4" uid="6a58d610a6f3468ea90bb0d6755f8ae8" name="Code Creation" meeting="false" start="2025-09-26" duration="11" complete="0" expand="true"/>
+        <task id="5" uid="6fdddb7d40bc4e8ebfd21c86f4c0f57b" name="App Creation" meeting="false" start="2025-10-15" duration="20" complete="0" expand="true"/>
+        <task id="6" uid="f09e074b80bf42b2a58e1570370d07bf" name="Housing Creation" meeting="false" start="2025-10-29" duration="20" complete="0" expand="true"/>
+        <task id="7" uid="48b2b70fdd9c4ad4b53ab8f62c3cbcb7" name="PCB Testing/Iteration" meeting="false" start="2025-10-29" duration="20" complete="0" expand="true"/>
+        <task id="8" uid="b5eaf8603b444741b7ca01ca03e26c87" name="Presentation Creation" meeting="false" start="2025-11-11" duration="20" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="1" name="Tyler" function="Default:1" contacts="" phone=""/>
+        <resource id="2" name="Samad" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Guandong" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="1" resource-id="1" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="3" resource-id="1" function="Default:0" responsible="false" load="55.0"/>
+        <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="5" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="9" resource-id="1" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="7" resource-id="1" function="Default:0" responsible="false" load="30.0"/>
+        <allocation task-id="8" resource-id="1" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="1" resource-id="2" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="3" resource-id="2" function="Default:0" responsible="false" load="30.0"/>
+        <allocation task-id="2" resource-id="2" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="4" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="5" resource-id="2" function="Default:0" responsible="false" load="30.0"/>
+        <allocation task-id="7" resource-id="2" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="8" resource-id="2" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="1" resource-id="3" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="6" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="7" resource-id="3" function="Default:0" responsible="true" load="30.0"/>
+        <allocation task-id="8" resource-id="3" function="Default:0" responsible="false" load="10.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
