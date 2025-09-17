@@ -1,0 +1,26 @@
+* C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\Simulation\Current_Source_Simulation.asc
+XU1 NC_01 NC_02 NC_03 NC_04 NC_05 LT1006
+XU2 0 NC_06 N006 -30V +30V N002 NC_07 N005 LT1102
+R1 N001 N005 10k
+C1 N002 N001 0.05µ
+V1 +30V 0 10
+V2 -30V 0 -10
+V3 Inpt_Freq 0 SINE(0 5 2000)
+R2 N002 N006 10
+R3 N006 0 10k
+V4 Const 0 5
+XU3 Inpt_Freq N001 +30V -30V N002 level1 Avol=1Meg GBW=10Meg Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+XU4 DDS_Out N004 V- V+ N003 level1 Avol=1Meg GBW=10Meg Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+XU5 N003 N008 V- V+ N007 level1 Avol=1Meg GBW=200000 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+C2 N003 N004 2n
+R4 N007 N004 10k
+R5 N003 N008 10
+R6 N008 0 1k
+V5 V+ 0 30
+V6 V- 0 -30
+V7 DDS_Out 0 SINE(0 5 2000)
+.tran 0 2.5m 0
+.lib LTC.lib
+.lib UniversalOpAmp1.lib
+.backanno
+.end

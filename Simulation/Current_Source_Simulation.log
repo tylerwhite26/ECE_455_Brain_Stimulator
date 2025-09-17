@@ -1,0 +1,66 @@
+Circuit: * C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\Simulation\Current_Source_Simulation.asc
+
+WARNING: Less than two connections to node CONST.  This node is used by V4.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+Gmin = 3.06744e-007
+vernier = 0.666667
+vernier = 0.333333
+Gmin = 1.39033e-007
+vernier = 0.444444
+vernier = 0.592592
+Gmin = 4.50627e-008
+vernier = 0.790123
+vernier = 1
+Gmin = 8.07595e-009
+Gmin = 8.67149e-010
+Gmin = 9.31094e-011
+Gmin = 9.99755e-012
+Gmin = 1.07348e-012
+Gmin = 1.15264e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Heightened Def Con from 2.44969e-011 to 4.0245e-009
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243063
+Heightened Def Con from 0.00243063 to 0.00243064
+Heightened Def Con from 0.00243064 to 0.00243064
+Heightened Def Con from 0.00243064 to 0.00243064
+
+Date: Sun Sep 14 15:12:28 2025
+Total elapsed time: 0.268 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 11447
+traniter = 10721
+tranpoints = 2631
+accept = 2136
+rejected = 510
+matrix size = 43
+fillins = 44
+solver = Normal
+Thread vector: 4.5/3.7[3] 1.5/1.0[3] 1.0/0.7[3] 0.2/0.8[1]  2592/500
+Matrix Compiler1: 4.62 KB object code size  1.1/0.3/[0.2]
+Matrix Compiler2: off  [0.3]/0.5/0.3
+
