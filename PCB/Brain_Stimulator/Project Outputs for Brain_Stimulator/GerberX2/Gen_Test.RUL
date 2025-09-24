@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Brain_Stimulator\Gen_Test.PcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

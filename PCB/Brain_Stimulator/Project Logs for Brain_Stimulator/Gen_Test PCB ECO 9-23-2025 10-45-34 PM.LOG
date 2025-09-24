@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=SCLK Pin=P6-2
+Removed Pin From Net: NetName=\C\S\ Pin=P6-3
+Added Pin To Net: NetName=\C\S\ Pin=P6-2
+Added Pin To Net: NetName=SCLK Pin=P6-3
+Added Room: Name=DDS_Module

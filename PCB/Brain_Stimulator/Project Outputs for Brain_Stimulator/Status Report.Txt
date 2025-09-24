@@ -1,0 +1,27 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of PCB Document [Gen_Test.PcbDoc]
+   Generated File[Gen_Test_Copper_Signal_Top.gbr]
+   Generated File[Gen_Test_Copper_Signal_Bot.gbr]
+   Generated File[Gen_Test_Pads_Bot.gbr]
+   Generated File[Gen_Test_Pads_Top.gbr]
+   Generated File[Gen_Test_Legend_Bot.gbr]
+   Generated File[Gen_Test_Soldermask_Bot.gbr]
+   Generated File[Gen_Test_Paste_Bot.gbr]
+   Generated File[Gen_Test_Legend_Top.gbr]
+   Generated File[Gen_Test_Paste_Top.gbr]
+   Generated File[Gen_Test_Soldermask_Top.gbr]
+   Generated File[Gen_Test_Keep-out.gbr]
+   Generated File[Gen_Test_Mechanical_13.gbr]
+   Generated File[Gen_Test_Mechanical_1.gbr]
+   Generated File[Gen_Test_Mechanical_15.gbr]
+   Generated File[Gen_Test_Profile.gbr]
+   Generated File[Gen_Test.RUL]
+   Generated File[Gen_Test.EXTREP]
+   Generated File[Gen_Test.REP]
+
+
+Files Generated   : 18
+Documents Printed : 0
+
+Finished Output Generation At 2:21:05 AM On 9/24/2025
