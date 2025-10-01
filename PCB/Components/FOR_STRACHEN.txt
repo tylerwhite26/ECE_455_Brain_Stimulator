@@ -1,0 +1,11 @@
+DDS:
+https://www.analog.com/en/products/ad9959.html#documentation
+
+Isolated Power:
+https://www.digikey.com/en/products/detail/analog-devices-inc/ADUM6028-3WBRIZ-RL/21379884
+
+Isolated ADC:
+https://www.digikey.com/en/products/detail/texas-instruments/AMC0106M05DENR/26812598?curr=usd
+
+1V8 LDO:
+https://www.digikey.com/en/products/detail/texas-instruments/TLV74118PDBVR/7604407
