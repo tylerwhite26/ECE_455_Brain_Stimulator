@@ -1,0 +1,21 @@
+Circuit: * C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\Simulation\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Oct 02 02:08:46 2025
+Total elapsed time: 0.096 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2101
+traniter = 2094
+tranpoints = 1048
+accept = 1048
+rejected = 0
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1:      13 opcodes  0.0/[0.0]/0.1
+Matrix Compiler2:      38 opcodes  0.0/[0.0]/0.1
+

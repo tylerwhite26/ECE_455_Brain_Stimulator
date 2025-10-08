@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+#control_panel, #bluetooth_connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.frequency_control {
+    display: flex;
+    flex-direction: row;
+}
