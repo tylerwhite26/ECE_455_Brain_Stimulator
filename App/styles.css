@@ -27,3 +27,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+.conn-good {
+    color: green;
+}

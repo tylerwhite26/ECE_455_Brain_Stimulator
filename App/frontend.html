@@ -16,7 +16,7 @@
             <div class="frequency_control">
                 <label for="frequency_1">Frequency 1 (Hz):</label>
                 <input type="number" id="frequency_1" min="1" max="10000" value="1000">
-                <button class="enable_output" id="enable_output_1">Enable</button>
+                <button class="enable_output" id="enable_output_1" onclick="writeToDevice()">Enable</button>
             </div>
             <div class="frequency_control">
                 <label for="frequency_2">Frequency 2 (Hz):</label>
@@ -31,7 +31,7 @@
         <div id="bluetooth_connection">
             <h2 id="bluetooth_panel">Bluetooth</h2>
             <button id="connect_bluetooth" onclick="startBluetooth()">Connect to Device</button>
-            <span id="connection_status">Not Connected</span>
+            <span id="connection_status" class="basic-disp">Not Connected</span>
         </div>
     </main>
 </body>
