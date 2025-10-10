@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #deecfc;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,8 +12,24 @@ body {
 #title {
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    background-color: #deecfc;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#top-text {
+    padding: 0;
+    margin: 0;
+}
+
+#authors {
+    padding: 0rem;
+    margin: 0;
 }
 
 #control_panel, #bluetooth_connection {
@@ -21,6 +37,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #f2ecde;
 }
 
 .frequency_control {
@@ -30,4 +50,29 @@ body {
 
 .conn-good {
     color: green;
+}
+
+button {
+    background-color: #f7fcf7;
+    border-radius: 0.5rem;
+    border-color: black;
+    border-width: 0.05rem;
+    padding: 0.2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#clicked-button {
+    background-color: #e7ece7;
+}
+
+input {
+    background-color: #f7fcf7;
+    border-radius: 0.5rem;
+    border-color: black;
+    border-width: 0.05rem;
+    padding: 0.2rem;
+    text-align: right;
 }
