@@ -1,1 +1,7 @@
-Record=TopLevelDocument|FileName=Sheet1.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=High_Level_Connections.SchDoc|SheetNumber=2
+Record=SheetSymbol|SourceDocument=High_Level_Connections.SchDoc|Designator=U_Current_Measure|SchDesignator=U_Current_Measure|FileName=Current_Measure.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=Current_Measure.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=High_Level_Connections.SchDoc|Designator=U_DDS_Module|SchDesignator=U_DDS_Module|FileName=DDS_Module.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=DDS_Module.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=High_Level_Connections.SchDoc|Designator=U_Non_Isolated_Sources|SchDesignator=U_Non_Isolated_Sources|FileName=Non_Isolated_Sources.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=Non_Isolated_Sources.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=High_Level_Connections.SchDoc|FileName=Iso_Current_Source.SchDoc|SheetNumber=7
+Record=NoMainPathDocument|SourceDocument=High_Level_Connections.SchDoc|FileName=MCU.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=High_Level_Connections.SchDoc|FileName=Table_of_Contents.SchDoc|SheetNumber=1
