@@ -77,14 +77,12 @@ def parse_frequency_data(data):
             set_frequency(0, freq)  # Set channel 0
             return
         
-        # Handle two frequencies: "1000,2000"
+        # Handle multiple frequencies: "1000,2000,3000,4000"
         freqs = data_str.split(',')
-        if len(freqs) >= 2:
-            freq1 = float(freqs[0].strip())
-            freq2 = float(freqs[1].strip())
-            set_frequency(0, freq1)
-            set_frequency(1, freq2)
-            return
+        for i, freq_str in enumerate(freqs):
+            if i < 4:  # Only set up to 4 channels
+                freq = float(freq_str.strip())
+                set_frequency(i, freq)
             
     except (ValueError, UnicodeDecodeError) as e:
         print(f"Error parsing data: {e}")
