@@ -16,17 +16,27 @@
             <h2 id="frequency_controls">Frequency Controls</h2>
             <div class="frequency_control">
                 <label for="frequency_1">Frequency 1 (Hz):</label>
-                <input type="number" id="frequency_1" min="1" max="10000" value="1000">
-                <!-- <button class="enable_output" id="enable_output_1" onclick="sendFrequency1()">Enable</button> -->
+                <input type="number" id="frequency_1" min="1" max="5000" value="1000">
             </div>
             <div class="frequency_control">
                 <label for="frequency_2">Frequency 2 (Hz):</label>
-                <input type="number" id="frequency_2" min="1" max="10000" value="1000">
-                <!-- <button class="enable_output" id="enable_output_2" onclick="sendFrequency2()">Enable</button> -->
+                <input type="number" id="frequency_2" min="1" max="5000" value="1000">
             </div>
             <div class="calc_val">
-                <label for="beat_calc">Beat Frequency (Hz):</label>
-                <output id="beat_calc">0</output>
+                <b><label for="beat_calc_1">Beat Frequency 1-2 (Hz):</label>
+                <output id="beat_calc_1">0</output></b>
+            </div>
+            <div class="frequency_control">
+                <label for="frequency_3">Frequency 3 (Hz):</label>
+                <input type="number" id="frequency_3" min="1" max="5000" value="1000">
+            </div>
+            <div class="frequency_control">
+                <label for="frequency_4">Frequency 4 (Hz):</label>
+                <input type="number" id="frequency_4" min="1" max="5000" value="1000">
+            </div>
+            <div class="calc_val">
+                <label for="beat_calc_2">Beat Frequency 3-4 (Hz):</label>
+                <output id="beat_calc_2">0</output>
             </div>
             <button id="program-button" onclick="programDevice()">Program Device</button>
         </div>

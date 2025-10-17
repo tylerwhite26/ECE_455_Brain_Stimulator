@@ -2,13 +2,35 @@
 function updateBeatOutput() {
     const freq1 = parseFloat(document.getElementById('frequency_1').value) || 0;
     const freq2 = parseFloat(document.getElementById('frequency_2').value) || 0;
-    const beat = Math.abs(freq1 - freq2);
-    document.getElementById('beat_calc').value = `${beat}`;
+    const freq3 = parseFloat(document.getElementById('frequency_3').value) || 0;
+    const freq4 = parseFloat(document.getElementById('frequency_4').value) || 0;
+    
+    const beat1 = Math.abs(freq1 - freq2);
+    const beat2 = Math.abs(freq3 - freq4);
+    
+    document.getElementById('beat_calc_1').value = `${beat1}`;
+    document.getElementById('beat_calc_2').value = `${beat2}`;
 }
 
-// Call updateBeatOutput() whenever the input values change
-document.getElementById('frequency_1').addEventListener('input', updateBeatOutput);
-document.getElementById('frequency_2').addEventListener('input', updateBeatOutput);
+// Validate and constrain frequency input
+function validateFrequency(inputId) {
+    const input = document.getElementById(inputId);
+    let value = parseFloat(input.value);
+    
+    if (isNaN(value) || value < 0) {
+        input.value = 0;
+    } else if (value > 5000) {
+        input.value = 5000;
+    }
+    
+    updateBeatOutput();
+}
+
+// Add validation to all frequency inputs
+document.getElementById('frequency_1').addEventListener('input', () => validateFrequency('frequency_1'));
+document.getElementById('frequency_2').addEventListener('input', () => validateFrequency('frequency_2'));
+document.getElementById('frequency_3').addEventListener('input', () => validateFrequency('frequency_3'));
+document.getElementById('frequency_4').addEventListener('input', () => validateFrequency('frequency_4'));
 
 // Call once on page load
 updateBeatOutput();
@@ -110,16 +132,40 @@ function sendFrequency2() {
     writeToDevice(message);
 }
 
-// Program device with both frequencies
+// Send frequency 3
+function sendFrequency3() {
+    const freq3 = parseFloat(document.getElementById('frequency_3').value);
+    if (isNaN(freq3)) {
+        alert("Please enter a valid frequency");
+        return;
+    }
+    const message = `${freq3}\n`;
+    writeToDevice(message);
+}
+
+// Send frequency 4
+function sendFrequency4() {
+    const freq4 = parseFloat(document.getElementById('frequency_4').value);
+    if (isNaN(freq4)) {
+        alert("Please enter a valid frequency");
+        return;
+    }
+    const message = `${freq4}\n`;
+    writeToDevice(message);
+}
+
+// Program device with all four frequencies
 function programDevice() {
     const freq1 = parseFloat(document.getElementById('frequency_1').value);
     const freq2 = parseFloat(document.getElementById('frequency_2').value);
+    const freq3 = parseFloat(document.getElementById('frequency_3').value);
+    const freq4 = parseFloat(document.getElementById('frequency_4').value);
     
-    if (isNaN(freq1) || isNaN(freq2)) {
-        alert("Please enter valid frequencies");
+    if (isNaN(freq1) || isNaN(freq2) || isNaN(freq3) || isNaN(freq4)) {
+        alert("Please enter valid frequencies for all channels");
         return;
     }
     
-    const message = `${freq1},${freq2}\n`;
+    const message = `${freq1},${freq2},${freq3},${freq4}\n`;
     writeToDevice(message);
 }
