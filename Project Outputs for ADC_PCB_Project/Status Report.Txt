@@ -1,0 +1,38 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [ADC_PCB_Project.PrjPcb]
+   Generated File[ADC_Breakout.GTO]
+   Generated File[ADC_Breakout.GTP]
+   Generated File[ADC_Breakout.GTS]
+   Generated File[ADC_Breakout.GTL]
+   Generated File[ADC_Breakout.GBL]
+   Generated File[ADC_Breakout.GBS]
+   Generated File[ADC_Breakout.GBP]
+   Generated File[ADC_Breakout.GBO]
+   Generated File[ADC_Breakout.GM1]
+   Generated File[ADC_Breakout.GM2]
+   Generated File[ADC_Breakout.GM3]
+   Generated File[ADC_Breakout.GM5]
+   Generated File[ADC_Breakout.GM13]
+   Generated File[ADC_Breakout.GM15]
+   Generated File[ADC_Breakout.GM16]
+   Generated File[ADC_Breakout.GM20]
+   Generated File[ADC_Breakout.GM21]
+   Generated File[ADC_Breakout.GM23]
+   Generated File[ADC_Breakout.GM24]
+   Generated File[ADC_Breakout.GKO]
+   Generated File[ADC_Breakout.GPT]
+   Generated File[ADC_Breakout.GPB]
+   Generated File[ADC_Breakout.1]
+   Generated File[ADC_Breakout.GML]
+   Generated File[ADC_Breakout.GD1]
+   Generated File[ADC_Breakout.GG1]
+   Generated File[ADC_Breakout.GM]
+   Generated File[ADC_Breakout.EXTREP]
+   Generated File[ADC_Breakout.REP]
+
+
+Files Generated   : 29
+Documents Printed : 0
+
+Finished Output Generation At 2:37:05 PM On 10/23/2025
