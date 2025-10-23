@@ -1,0 +1,466 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD25\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10/22/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:18:02 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc" class="file"><acronym title="C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc">C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">42</td></tr>
+</table>
+</td>
+</table><a name="IDUC3FFN5U0DBFPCX5HRQEDDFFBKCTBR5DQG2VWIJ1DFPWQ2QYJKJC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIRM5PCLRGYITLL1KGI1ZCPCD5PBGGFFMFO3OJVJSTN2KLVABH4KN">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKYDD3Q2M1QOOBO3EGVUHATGNMMLXJYOBGR4SW0LKI4W3PYJ251CC">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4EVM3PE4GU51JYXEX4XKHSEESPOU2O0BDXOQNSD4Z4JC5CMJWZSB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLQBG0TB1O4GKEAQ32WBO2T4OAGFGBKM1Z1ET13FELL21V3ISEDYO">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID43G0COD14WYTHYTFXTFO0Z04YH3GWTWN25EHIWH2SJAYG1A0KNUN">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID32LJIORVP0RCARG5SGZAOANADER14L1DUZFLTPXZ4PV4YL5ZTUO">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2WMV0HEYNS11M15SE3UAMVL1QLQRHVNPB1FQVVQJALRG2QVKWXF">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFJO3ACJMX5V0KRVIVRJEKUWBJFKHXRIDX5HCS5JKZT0P0F5V3P2E">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQWH5UUZB2M11CRN5N0QCG5XWCOXFSRQVKQORWPF4ANUL0A323KJB">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZLHCOITZ1XREGTMCMAWWCG1YVCXZFYSLSH4YUWGVH24JUY0BN0DJ">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID31U4K0NCZQXJGOST3D3VXLUOUHOUVAICHUHG2TJETUBSJDM4NBGG">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKHACXER2DX0XBN2ZNDFHTDNOVMFWJHWBTOPEXGECKOYRYU00TC2O">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE4S5IENQ3UVKFASB4JPJGJT31JUXIESNXOQQHLBAFCVDYUHQC0RF">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJQODEPX22155PHDBJ5QNXR5G5LMDJOJJ5LBZLIHYRFFY3C0PUCBI">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">42</td>
+</tr>
+</table><br><a name="IDIRM5PCLRGYITLL1KGI1ZCPCD5PBGGFFMFO3OJVJSTN2KLVABH4KN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.288mil|Location2.X=6073.538mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.288mil|Location2.X=6073.538mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Clearance Constraint: (8.898mil &lt; 10mil) Between Pad Free-2(6033.465mil,1791.339mil) on Multi-Layer And Pad Free-2(6102.362mil,1791.339mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5993.391mil|Location2.X=6004.641mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5993.391mil|Location2.X=6004.641mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Clearance Constraint: (8.898mil &lt; 10mil) Between Pad Free-2(6033.465mil,1791.339mil) on Multi-Layer And Pad Free-3(5964.567mil,1791.339mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.243mil|Location2.X=5935.493mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.243mil|Location2.X=5935.493mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Clearance Constraint: (9.398mil &lt; 10mil) Between Pad Free-3(5964.567mil,1791.339mil) on Multi-Layer And Pad Free-4(5895.669mil,1791.339mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.493mil|Location2.X=5935.743mil|Location1.Y=1529.808mil|Location2.Y=1541.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.493mil|Location2.X=5935.743mil|Location1.Y=1529.808mil|Location2.Y=1541.058mil|Absolute=True">Clearance Constraint: (8.898mil &lt; 10mil) Between Pad Free-5(5895.669mil,1535.433mil) on Multi-Layer And Pad Free-6(5964.567mil,1535.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1671.54mil|Location2.Y=1682.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1671.54mil|Location2.Y=1682.79mil|Absolute=True">Clearance Constraint: (9.842mil &lt; 10mil) Between Pad U1-1(6003.937mil,1682.087mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1630.202mil|Location2.Y=1641.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1630.202mil|Location2.Y=1641.452mil|Absolute=True">Clearance Constraint: (9.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-6(6133.858mil,1630.906mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1655.792mil|Location2.Y=1667.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1655.792mil|Location2.Y=1667.042mil|Absolute=True">Clearance Constraint: (9.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-7(6133.858mil,1656.496mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1681.383mil|Location2.Y=1692.633mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1681.383mil|Location2.Y=1692.633mil|Absolute=True">Clearance Constraint: (9.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-8(6133.858mil,1682.087mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.639mil|Location2.X=6119.889mil|Location1.Y=1684.033mil|Location2.Y=1695.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.639mil|Location2.X=6119.889mil|Location1.Y=1684.033mil|Location2.Y=1695.283mil|Absolute=True">Clearance Constraint: (5.824mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Track (6088.61mil,1726.501mil)(6121.299mil,1693.812mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6119.877mil|Location1.Y=1681.973mil|Location2.Y=1693.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6119.877mil|Location1.Y=1681.973mil|Location2.Y=1693.223mil|Absolute=True">Clearance Constraint: (4.095mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Track (6121.299mil,1682.165mil)(6121.299mil,1693.812mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6119.877mil|Location1.Y=1676.54mil|Location2.Y=1687.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6119.877mil|Location1.Y=1676.54mil|Location2.Y=1687.79mil|Absolute=True">Clearance Constraint: (4.095mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Track (6121.299mil,1682.165mil)(6121.378mil,1682.087mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.666mil|Location2.X=6119.916mil|Location1.Y=1676.462mil|Location2.Y=1687.712mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.666mil|Location2.X=6119.916mil|Location1.Y=1676.462mil|Location2.Y=1687.712mil|Absolute=True">Clearance Constraint: (4.173mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Track (6121.378mil,1682.087mil)(6127.953mil,1682.087mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1645.95mil|Location2.Y=1657.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1645.95mil|Location2.Y=1657.2mil|Absolute=True">Clearance Constraint: (9.842mil &lt; 10mil) Between Pad U1-2(6003.937mil,1656.496mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1620.359mil|Location2.Y=1631.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1620.359mil|Location2.Y=1631.609mil|Absolute=True">Clearance Constraint: (9.842mil &lt; 10mil) Between Pad U1-3(6003.937mil,1630.906mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.777mil|Location2.X=6154.027mil|Location1.Y=1643.217mil|Location2.Y=1654.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.777mil|Location2.X=6154.027mil|Location1.Y=1643.217mil|Location2.Y=1654.467mil|Absolute=True">Clearance Constraint: (7.729mil &lt; 10mil) Between Pad U1-7(6133.858mil,1656.496mil) on Top Layer And Track (6143.08mil,1630.984mil)(6174.764mil,1662.668mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.104mil|Location2.X=6153.354mil|Location1.Y=1683.442mil|Location2.Y=1694.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.104mil|Location2.X=6153.354mil|Location1.Y=1683.442mil|Location2.Y=1694.692mil|Absolute=True">Clearance Constraint: (5.824mil &lt; 10mil) Between Pad U1-8(6133.858mil,1682.087mil) on Top Layer And Track (6101.646mil,1746.339mil)(6154.764mil,1693.221mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.104mil|Location2.X=6153.354mil|Location1.Y=1669.481mil|Location2.Y=1680.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.104mil|Location2.X=6153.354mil|Location1.Y=1669.481mil|Location2.Y=1680.731mil|Absolute=True">Clearance Constraint: (5.824mil &lt; 10mil) Between Pad U1-8(6133.858mil,1682.087mil) on Top Layer And Track (6145.977mil,1662.165mil)(6154.764mil,1670.952mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.092mil|Location2.X=6153.342mil|Location1.Y=1671.54mil|Location2.Y=1682.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6142.092mil|Location2.X=6153.342mil|Location1.Y=1671.54mil|Location2.Y=1682.79mil|Absolute=True">Clearance Constraint: (4.095mil &lt; 10mil) Between Pad U1-8(6133.858mil,1682.087mil) on Top Layer And Track (6154.764mil,1670.952mil)(6154.764mil,1693.221mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDZLHCOITZ1XREGTMCMAWWCG1YVCXZFYSLSH4YUWGVH24JUY0BN0DJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5639.981mil|Location2.X=5651.231mil|Location1.Y=1214.848mil|Location2.Y=1226.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5639.981mil|Location2.X=5651.231mil|Location1.Y=1214.848mil|Location2.Y=1226.098mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.716mil &lt; 10mil) Between Pad C1-2(5669.291mil,1248.032mil) on Top Layer And Pad C2-1(5669.291mil,1192.914mil) on Top Layer [Top Solder] Mask Sliver [9.716mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6323.115mil|Location2.X=6334.365mil|Location1.Y=1400.379mil|Location2.Y=1411.629mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6323.115mil|Location2.X=6334.365mil|Location1.Y=1400.379mil|Location2.Y=1411.629mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (6.764mil &lt; 10mil) Between Pad C3-1(6328.74mil,1379.921mil) on Top Layer And Via (6328.74mil,1427.165mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [6.764mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6299.43mil|Location2.X=6310.68mil|Location1.Y=1283.745mil|Location2.Y=1294.995mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6299.43mil|Location2.X=6310.68mil|Location1.Y=1283.745mil|Location2.Y=1294.995mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.717mil &lt; 10mil) Between Pad C3-2(6328.74mil,1316.929mil) on Top Layer And Pad C4-2(6328.74mil,1261.811mil) on Top Layer [Top Solder] Mask Sliver [9.717mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.288mil|Location2.X=6073.538mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.288mil|Location2.X=6073.538mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.898mil &lt; 10mil) Between Pad Free-2(6033.465mil,1791.339mil) on Multi-Layer And Pad Free-2(6102.362mil,1791.339mil) on Multi-Layer [Top Solder] Mask Sliver [0.898mil] / [Bottom Solder] Mask Sliver [0.898mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5993.391mil|Location2.X=6004.641mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5993.391mil|Location2.X=6004.641mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.898mil &lt; 10mil) Between Pad Free-2(6033.465mil,1791.339mil) on Multi-Layer And Pad Free-3(5964.567mil,1791.339mil) on Multi-Layer [Top Solder] Mask Sliver [0.898mil] / [Bottom Solder] Mask Sliver [0.898mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.243mil|Location2.X=5935.493mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.243mil|Location2.X=5935.493mil|Location1.Y=1785.714mil|Location2.Y=1796.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.398mil &lt; 10mil) Between Pad Free-3(5964.567mil,1791.339mil) on Multi-Layer And Pad Free-4(5895.669mil,1791.339mil) on Multi-Layer [Top Solder] Mask Sliver [1.398mil] / [Bottom Solder] Mask Sliver [1.398mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.493mil|Location2.X=5935.743mil|Location1.Y=1529.808mil|Location2.Y=1541.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5924.493mil|Location2.X=5935.743mil|Location1.Y=1529.808mil|Location2.Y=1541.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.898mil &lt; 10mil) Between Pad Free-5(5895.669mil,1535.433mil) on Multi-Layer And Pad Free-6(5964.567mil,1535.433mil) on Multi-Layer [Top Solder] Mask Sliver [0.898mil] / [Bottom Solder] Mask Sliver [0.898mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1663.666mil|Location2.Y=1674.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1663.666mil|Location2.Y=1674.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-1(6003.937mil,1682.087mil) on Top Layer And Pad U1-2(6003.937mil,1656.496mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1667.54mil|Location2.Y=1678.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1667.54mil|Location2.Y=1678.79mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 10mil) Between Pad U1-1(6003.937mil,1682.087mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1590.769mil|Location2.Y=1602.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1590.769mil|Location2.Y=1602.019mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-5(6133.858mil,1605.315mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1616.359mil|Location2.Y=1627.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1616.359mil|Location2.Y=1627.609mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-6(6133.858mil,1630.906mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1641.95mil|Location2.Y=1653.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1641.95mil|Location2.Y=1653.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-7(6133.858mil,1656.496mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1667.54mil|Location2.Y=1678.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6111.501mil|Location2.X=6122.751mil|Location1.Y=1667.54mil|Location2.Y=1678.79mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U1-10(6102.362mil,1643.701mil) on Top Layer And Pad U1-8(6133.858mil,1682.087mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1638.076mil|Location2.Y=1649.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1638.076mil|Location2.Y=1649.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-2(6003.937mil,1656.496mil) on Top Layer And Pad U1-3(6003.937mil,1630.906mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1641.95mil|Location2.Y=1653.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1641.95mil|Location2.Y=1653.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 10mil) Between Pad U1-2(6003.937mil,1656.496mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1612.485mil|Location2.Y=1623.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.501mil|Location2.X=5993.751mil|Location1.Y=1612.485mil|Location2.Y=1623.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-3(6003.937mil,1630.906mil) on Top Layer And Pad U1-4(6003.937mil,1605.315mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1616.359mil|Location2.Y=1627.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1616.359mil|Location2.Y=1627.609mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 10mil) Between Pad U1-3(6003.937mil,1630.906mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1590.769mil|Location2.Y=1602.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6015.044mil|Location2.X=6026.294mil|Location1.Y=1590.769mil|Location2.Y=1602.019mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 10mil) Between Pad U1-4(6003.937mil,1605.315mil) on Top Layer And Pad U1-9(6039.37mil,1643.701mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1612.485mil|Location2.Y=1623.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1612.485mil|Location2.Y=1623.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-5(6133.858mil,1605.315mil) on Top Layer And Pad U1-6(6133.858mil,1630.906mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1638.076mil|Location2.Y=1649.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1638.076mil|Location2.Y=1649.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-6(6133.858mil,1630.906mil) on Top Layer And Pad U1-7(6133.858mil,1656.496mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1663.666mil|Location2.Y=1674.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6112.422mil|Location2.X=6123.672mil|Location1.Y=1663.666mil|Location2.Y=1674.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad U1-7(6133.858mil,1656.496mil) on Top Layer And Pad U1-8(6133.858mil,1682.087mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDKHACXER2DX0XBN2ZNDFHTDNOVMFWJHWBTOPEXGECKOYRYU00TC2O"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5911.697mil|Location2.X=5922.947mil|Location1.Y=1651.857mil|Location2.Y=1663.107mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5911.697mil|Location2.X=5922.947mil|Location1.Y=1651.857mil|Location2.Y=1663.107mil|Absolute=True">Silk To Silk Clearance Constraint: (5.908mil &lt; 10mil) Between Text "R1" (5897.641mil,1657.482mil) on Top Overlay And Track (5921.26mil,1602.362mil)(5921.26mil,1685.039mil) on Top Overlay Silk Text to Silk Clearance [5.908mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5710.226mil|Location2.X=5721.476mil|Location1.Y=1419.502mil|Location2.Y=1430.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5710.226mil|Location2.X=5721.476mil|Location1.Y=1419.502mil|Location2.Y=1430.752mil|Absolute=True">Silk To Silk Clearance Constraint: (5.766mil &lt; 10mil) Between Text "R2" (5715.851mil,1429.51mil) on Top Overlay And Track (5696.85mil,1421.26mil)(5779.528mil,1421.26mil) on Top Overlay Silk Text to Silk Clearance [5.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6008mil|Location2.X=6019.25mil|Location1.Y=1410.152mil|Location2.Y=1421.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\abdus\OneDrive\Desktop\ECE 455\ADC_Breakout.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6008mil|Location2.X=6019.25mil|Location1.Y=1410.152mil|Location2.Y=1421.402mil|Absolute=True">Silk To Silk Clearance Constraint: (4.782mil &lt; 10mil) Between Text "U2" (6011.126mil,1419.668mil) on Top Overlay And Track (5893.701mil,1409.449mil)(6173.228mil,1409.449mil) on Top Overlay Silk Text to Silk Clearance [4.782mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
