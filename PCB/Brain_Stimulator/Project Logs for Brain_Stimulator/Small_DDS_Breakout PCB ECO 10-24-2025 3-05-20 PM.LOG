@@ -1,0 +1,16 @@
+Added Member To Class: ClassName=U_PGA_Block1 Member=Component C22_U_PGA_Block1 (C22) Cap
+Added Member To Class: ClassName=U_PGA_Block2 Member=Component C22_U_PGA_Block2 (C22) Cap
+Added Member To Class: ClassName=U_PGA_Block3 Member=Component C22_U_PGA_Block3 (C22) Cap
+Added Member To Class: ClassName=U_PGA_Block4 Member=Component C22_U_PGA_Block4 (C22) Cap
+Added Member To Class: ClassName=U_Current_Measure1 Member=Component R7_U_Current_Measure1 (R7) Res1
+Added Member To Class: ClassName=U_Current_Measure2 Member=Component R7_U_Current_Measure2 (R7) Res1
+Added Member To Class: ClassName=U_Current_Measure3 Member=Component R7_U_Current_Measure3 (R7) Res1
+Added Member To Class: ClassName=U_Current_Measure4 Member=Component R7_U_Current_Measure4 (R7) Res1
+Added Member To Class: ClassName=U_Current_Measure1 Member=Component U2_U_Current_Measure1 (U2) ADC
+Added Member To Class: ClassName=U_Current_Measure2 Member=Component U2_U_Current_Measure2 (U2) ADC
+Added Member To Class: ClassName=U_Current_Measure3 Member=Component U2_U_Current_Measure3 (U2) ADC
+Added Member To Class: ClassName=U_Current_Measure4 Member=Component U2_U_Current_Measure4 (U2) ADC
+Added Member To Class: ClassName=U_PGA_Block1 Member=Component U6_U_PGA_Block1 (U6) MCP6S21T-I/MS
+Added Member To Class: ClassName=U_PGA_Block2 Member=Component U6_U_PGA_Block2 (U6) MCP6S21T-I/MS
+Added Member To Class: ClassName=U_PGA_Block3 Member=Component U6_U_PGA_Block3 (U6) MCP6S21T-I/MS
+Added Member To Class: ClassName=U_PGA_Block4 Member=Component U6_U_PGA_Block4 (U6) MCP6S21T-I/MS

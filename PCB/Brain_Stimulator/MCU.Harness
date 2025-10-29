@@ -1,0 +1,3 @@
+P=P0,P1,P2,P3
+PGA_CS=\P\G\A\_\C\S\0,\P\G\A\_\C\S\1,\P\G\A\_\C\S\2,\P\G\A\_\C\S\3
+SDIO=SDIO_0,SDIO_1,SDIO_2,SDIO_3
