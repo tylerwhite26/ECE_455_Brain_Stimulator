@@ -1,0 +1,60 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Brain_Stimulator\Flyback.PcbDoc
+Date     : 11/5/2025
+Time     : 11:52:51 AM
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 10mil) Between Pad D4-1(1282.008mil,280mil) on Top Layer And Track (1187.598mil,280mil)(1282.008mil,280mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Between Pad L1-4(1120.787mil,335mil) on Top Layer And Track (1120.787mil,335mil)(1132.598mil,335mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Between Pad L1-4(1120.787mil,335mil) on Top Layer And Track (1132.598mil,335mil)(1187.598mil,280mil) on Top Layer 
+Rule Violations :3
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad D4-1(1282.008mil,280mil) on Top Layer And Track (1187.598mil,280mil)(1282.008mil,280mil) on Top Layer Location : [X = 4391.184mil][Y = 3565mil]
+   Violation between Short-Circuit Constraint: Between Pad L1-4(1120.787mil,335mil) on Top Layer And Track (1120.787mil,335mil)(1132.598mil,335mil) on Top Layer Location : [X = 4256.693mil][Y = 3620mil]
+   Violation between Short-Circuit Constraint: Between Pad L1-4(1120.787mil,335mil) on Top Layer And Track (1132.598mil,335mil)(1187.598mil,280mil) on Top Layer Location : [X = 4270.824mil][Y = 3611.774mil]
+Rule Violations :3
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net NetD4_1 Between Pad L1-4(1120.787mil,335mil) on Top Layer And Pad D4-1(1282.008mil,280mil) on Top Layer 
+Rule Violations :1
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=50mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad D2-1(2000mil,535.039mil) on Top Layer And Text "D3" (1915.5mil,460.5mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+Rule Violations :1
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Arc (1936.024mil,477.953mil) on Top Overlay And Text "D3" (1915.5mil,460.5mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Text "D3" (1915.5mil,460.5mil) on Top Overlay And Track (1921.26mil,503.543mil)(1921.26mil,696.457mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Text "D3" (1915.5mil,460.5mil) on Top Overlay And Track (1921.26mil,503.543mil)(1941.929mil,503.543mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (5.794mil < 10mil) Between Text "R4" (617.202mil,710.321mil) on Top Overlay And Track (578.661mil,698.622mil)(661.338mil,698.622mil) on Top Overlay Silk Text to Silk Clearance [5.794mil]
+Rule Violations :4
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 12
+Waived Violations : 0
+Time Elapsed        : 00:00:01
