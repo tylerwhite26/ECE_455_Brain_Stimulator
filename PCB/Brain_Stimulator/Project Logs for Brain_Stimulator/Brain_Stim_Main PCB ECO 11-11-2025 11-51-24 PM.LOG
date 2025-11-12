@@ -1,0 +1,120 @@
+Removed Pin From Net: NetName=ATT_SIG_U_Current_Source1 Pin=R11_U_Current_Source1-2
+Removed Pin From Net: NetName=ATT_SIG_U_Current_Source2 Pin=R11_U_Current_Source2-2
+Removed Pin From Net: NetName=ATT_SIG_U_Current_Source3 Pin=R11_U_Current_Source3-2
+Removed Pin From Net: NetName=ATT_SIG_U_Current_Source4 Pin=R11_U_Current_Source4-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R13_U_Current_Source1-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R13_U_Current_Source2-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R13_U_Current_Source3-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R13_U_Current_Source4-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R15_U_Current_Source2-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R15_U_Current_Source3-2
+Removed Pin From Net: NetName=CS_IN_SIG1 Pin=R15_U_Current_Source4-2
+Added Component: Designator=*()
+Added Component: Designator=J1(STX-3000)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2092-STX-3000-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J2(STX-3000)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2092-STX-3000-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J3(STX-3000)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2092-STX-3000-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J4(STX-3000)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2092-STX-3000-ND"; VariantName = "[No Variations]"
+Added Component: Designator=T1(108E)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "HM2380-ND"; VariantName = "[No Variations]"
+Added Component: Designator=T2(108E)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "HM2380-ND"; VariantName = "[No Variations]"
+Added Component: Designator=T3(108E)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "HM2380-ND"; VariantName = "[No Variations]"
+Added Component: Designator=T4(108E)
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "HM2380-ND"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin *-3
+Add Pin To Net: Unknown Pin: Pin *-8
+Add Pin To Net: Unknown Pin: Pin *-13
+Add Pin To Net: Unknown Pin: Pin *-18
+Add Pin To Net: Unknown Pin: Pin *-23
+Add Pin To Net: Unknown Pin: Pin *-26
+Add Pin To Net: Unknown Pin: Pin *-28
+Add Pin To Net: Unknown Pin: Pin *-29
+Add Pin To Net: Unknown Pin: Pin *-38
+Added Pin To Net: NetName=FROM_BRAIN1 Pin=J1-1
+Added Pin To Net: NetName=STIM_0 Pin=J1-3
+Added Pin To Net: NetName=FROM_BRAIN2 Pin=J2-1
+Added Pin To Net: NetName=STIM_1 Pin=J2-3
+Added Pin To Net: NetName=FROM_BRAIN3 Pin=J3-1
+Added Pin To Net: NetName=STIM_2 Pin=J3-3
+Added Pin To Net: NetName=FROM_BRAIN4 Pin=J4-1
+Added Pin To Net: NetName=TF_LOW4 Pin=J4-3
+Added Pin To Net: NetName=ATT_SIG_U_Current_Source1 Pin=R13_U_Current_Source1-2
+Added Pin To Net: NetName=ATT_SIG_U_Current_Source2 Pin=R13_U_Current_Source2-2
+Added Pin To Net: NetName=ATT_SIG_U_Current_Source3 Pin=R13_U_Current_Source3-2
+Added Pin To Net: NetName=ATT_SIG_U_Current_Source4 Pin=R13_U_Current_Source4-2
+Added Pin To Net: NetName=CS_OUT1 Pin=T1-1
+Added Pin To Net: NetName=GND Pin=T1-3
+Added Pin To Net: NetName=TF_LOW1 Pin=T1-4
+Added Pin To Net: NetName=STIM_0 Pin=T1-6
+Added Pin To Net: NetName=CS_OUT2 Pin=T2-1
+Added Pin To Net: NetName=GND Pin=T2-3
+Added Pin To Net: NetName=TF_LOW2 Pin=T2-4
+Added Pin To Net: NetName=STIM_1 Pin=T2-6
+Added Pin To Net: NetName=CS_OUT3 Pin=T3-1
+Added Pin To Net: NetName=GND Pin=T3-3
+Added Pin To Net: NetName=TF_LOW3 Pin=T3-4
+Added Pin To Net: NetName=STIM_2 Pin=T3-6
+Added Pin To Net: NetName=CS_OUT4 Pin=T4-1
+Added Pin To Net: NetName=GND Pin=T4-3
+Added Pin To Net: NetName=TF_LOW4 Pin=T4-4
+Added Pin To Net: NetName=STIM_3 Pin=T4-6
+Add Pin To Net: Unknown Pin: Pin U14-2
+Add Pin To Net: Unknown Pin: Pin U14-3
+Add Pin To Net: Unknown Pin: Pin U14-4
+Add Net: Net with name "ADC_CLK" already exists
+Added Pin To Net: NetName=CS_IN_SIG2 Pin=R15_U_Current_Source2-2
+Added Net: Name=CS_IN_SIG2
+Added Pin To Net: NetName=CS_IN_SIG3 Pin=R15_U_Current_Source3-2
+Added Net: Name=CS_IN_SIG3
+Added Pin To Net: NetName=CS_IN_SIG4 Pin=R15_U_Current_Source4-2
+Added Net: Name=CS_IN_SIG4
+Added Pin To Net: NetName=CS_MID_U_Current_Source1 Pin=R11_U_Current_Source1-2
+Added Pin To Net: NetName=CS_MID_U_Current_Source1 Pin=R11_U_Current_Source2-2
+Added Pin To Net: NetName=CS_MID_U_Current_Source1 Pin=R11_U_Current_Source3-2
+Added Pin To Net: NetName=CS_MID_U_Current_Source1 Pin=R11_U_Current_Source4-2
+Added Net: Name=CS_MID_U_Current_Source1
+Add Class Member: Failed to add class member : Component * Pico_2_W
+Added Member To Class: ClassName=U_Output_Isolation Member=Component J1 STX-3000
+Added Member To Class: ClassName=U_Output_Isolation Member=Component J2 STX-3000
+Added Member To Class: ClassName=U_Output_Isolation Member=Component J3 STX-3000
+Added Member To Class: ClassName=U_Output_Isolation Member=Component J4 STX-3000
+Added Member To Class: ClassName=U_Output_Isolation Member=Component T1 108E
+Added Member To Class: ClassName=U_Output_Isolation Member=Component T2 108E
+Added Member To Class: ClassName=U_Output_Isolation Member=Component T3 108E
+Added Member To Class: ClassName=U_Output_Isolation Member=Component T4 108E
+Added Member To Class: ClassName=CS_IN_SIG[1..4] Member=Element[1]: CS_IN_SIG
+Added Member To Class: ClassName=CS_IN_SIG[1..4] Member=Element[2]: CS_IN_SIG
+Added Member To Class: ClassName=CS_IN_SIG[1..4] Member=Element[3]: CS_IN_SIG
+Added Room: Name=U_Battery_Connections
+Added Room: Name=U_Curr_Source_Buffer
+Added Room: Name=U_Current_Measure1
+Added Room: Name=U_Current_Measure2
+Added Room: Name=U_Current_Measure3
+Added Room: Name=U_Current_Measure4
+Added Room: Name=U_Flyback
+Added Room: Name=U_Four_DDS
+Added Room: Name=U_High_Level_Connections
+Added Room: Name=U_MCU
+Added Room: Name=U_Output_Isolation
+Added Room: Name=U_PGA_Block1
+Added Room: Name=U_PGA_Block2
+Added Room: Name=U_PGA_Block3
+Added Room: Name=U_PGA_Block4
+Added Room: Name=U_Small_DDS1
+Added Room: Name=U_Small_DDS2
+Added Room: Name=U_Small_DDS3
+Added Room: Name=U_Small_DDS4
+Added Room: Name=U_Stimulus_Feedback

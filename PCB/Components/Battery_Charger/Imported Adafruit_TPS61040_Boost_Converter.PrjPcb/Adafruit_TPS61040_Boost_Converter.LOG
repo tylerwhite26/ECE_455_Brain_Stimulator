@@ -1,0 +1,39 @@
+Importer Log Report
+Project : Adafruit_TPS61040_Boost_Converter.PrjPcb
+
+Section : Analyze Document - C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\Battery_Charger\Adafruit_TPS61040_Boost_Converter.brd
+    Analyzing data of C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\Battery_Charger\Adafruit_TPS61040_Boost_Converter.brd
+    Load settings
+    Load layers 177
+    Load board
+    Load Library "microbuilder"
+    Load Packages 9
+    Load Library "adafruit_power"
+    Load Packages 1
+    ERROR: Unhandled typemfgpreviewcolors
+EndSection
+
+Section : Analyze Document - C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\Battery_Charger\Adafruit_TPS61040_Boost_Converter.sch
+    Analyzing data of C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\Battery_Charger\Adafruit_TPS61040_Boost_Converter.sch
+    Load settings
+    Load layers 177
+    Load schematic
+    Load Libraries 3
+    Load Library "microbuilder"
+    Load Packages 64
+    Load Symbols 10
+    Load DeviceSets 9
+    Load Library "adafruit_power"
+    Load Packages 1
+    Load Symbols 2
+    Load DeviceSets 2
+    Load Library "supply1"
+    Load Packages 0
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Attributes 3
+    Load Classes 1
+    Load Parts 23
+    Load Sheets 1
+    ERROR: Unhandled type <errors>
+EndSection

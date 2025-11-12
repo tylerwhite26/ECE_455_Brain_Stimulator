@@ -1,0 +1,17 @@
+Importer Log Report
+Project : Adafruit MicroLipo Charger v2.PrjPcb
+
+Section : Analyze Document - C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\BMS\Adafruit MicroLipo Charger v2.brd
+    Analyzing data of C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Components\BMS\Adafruit MicroLipo Charger v2.brd
+    Load settings
+    Load layers 181
+    Load board
+    Load Library "microbuilder"
+    Load Packages 7
+    Load Library "adafruit_electromech"
+    Load Packages 3
+    Load Library "pinguin"
+    Load Packages 12
+    ERROR: Unhandled typemfgpreviewcolors
+    ERROR: Unhandled typeerrors
+EndSection
