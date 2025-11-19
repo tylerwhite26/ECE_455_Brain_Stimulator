@@ -1,0 +1,35 @@
+Added Pin To Net: NetName=PGA_SCK Pin=U1-GP10
+Added Pin To Net: NetName=PGA_SI Pin=U1-GP11
+Added Pin To Net: NetName=\P\G\A\_\C\S\1 Pin=U1-GP12
+Added Pin To Net: NetName=\P\G\A\_\C\S\2 Pin=U1-GP13
+Added Pin To Net: NetName=\P\G\A\_\C\S\3 Pin=U1-GP14
+Added Pin To Net: NetName=\P\G\A\_\C\S\4 Pin=U1-GP15
+Add Class Member: Failed to add class member : Component C16 Cap
+Add Class Member: Failed to add class member : Component C17 Cap
+Add Class Member: Failed to add class member : Component U3 LDL1117S50R
+Add Class Member: Failed to add class member : Component U4 TLV74118PDBVR
+Added Room: Name=U_Battery_Connections
+Added Room: Name=U_Curr_Source_Buffer
+Added Room: Name=U_Current_Measure1
+Added Room: Name=U_Current_Measure2
+Added Room: Name=U_Current_Measure3
+Added Room: Name=U_Current_Measure4
+Added Room: Name=U_Current_Source1
+Added Room: Name=U_Current_Source2
+Added Room: Name=U_Current_Source3
+Added Room: Name=U_Current_Source4
+Added Room: Name=U_Flyback
+Added Room: Name=U_Four_DDS
+Added Room: Name=U_High_Level_Connections
+Added Room: Name=U_MCU
+Added Room: Name=U_Non_Isolated_Sources
+Added Room: Name=U_Output_Isolation
+Added Room: Name=U_PGA_Block1
+Added Room: Name=U_PGA_Block2
+Added Room: Name=U_PGA_Block3
+Added Room: Name=U_PGA_Block4
+Added Room: Name=U_Small_DDS1
+Added Room: Name=U_Small_DDS2
+Added Room: Name=U_Small_DDS3
+Added Room: Name=U_Small_DDS4
+Added Room: Name=U_Stimulus_Feedback

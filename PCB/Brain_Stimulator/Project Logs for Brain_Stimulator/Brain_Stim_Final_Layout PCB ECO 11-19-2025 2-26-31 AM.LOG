@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=TF_LOW4 Pin=J4-1
+Added Pin To Net: NetName=STIM_3 Pin=J4-1
+Added Room: Name=U_Battery_Connections
+Added Room: Name=U_Curr_Source_Buffer
+Added Room: Name=U_Current_Measure1
+Added Room: Name=U_Current_Measure2
+Added Room: Name=U_Current_Measure3
+Added Room: Name=U_Current_Measure4
+Added Room: Name=U_Current_Source1
+Added Room: Name=U_Current_Source2
+Added Room: Name=U_Current_Source3
+Added Room: Name=U_Current_Source4
+Added Room: Name=U_Flyback
+Added Room: Name=U_Four_DDS
+Added Room: Name=U_High_Level_Connections
+Added Room: Name=U_MCU
+Added Room: Name=U_Output_Isolation
+Added Room: Name=U_PGA_Block1
+Added Room: Name=U_PGA_Block2
+Added Room: Name=U_PGA_Block3
+Added Room: Name=U_PGA_Block4
+Added Room: Name=U_Small_DDS1
+Added Room: Name=U_Small_DDS2
+Added Room: Name=U_Small_DDS3
+Added Room: Name=U_Small_DDS4
+Added Room: Name=U_Stimulus_Feedback
