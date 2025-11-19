@@ -491,6 +491,23 @@ GenerateClassCluster=0
 DocumentUniqueId=NNKRAFOH
 
 [Document27]
+DocumentPath=Brain_Stim_Final_Layout.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XTEVEJSS
+
+[Document28]
 DocumentPath=Flyback.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -507,7 +524,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HLBONYLT
 
-[Document28]
+[Document29]
 DocumentPath=Current_Source.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -524,7 +541,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TZLLZZFV
 
-[Document29]
+[Document30]
 DocumentPath=Curr_Source_Buffer.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -541,7 +558,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JRYWDWKD
 
-[Document30]
+[Document31]
 DocumentPath=Curr_Source_Buffer.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -558,7 +575,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document31]
+[Document32]
 DocumentPath=MCU.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -584,270 +601,274 @@ VariationCount=0
 ParamVariationCount=0
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Brain_Stimulator\Design Rule Check - Flyback.html
+DocumentPath=Project Outputs for Brain_Stimulator\Design Rule Check - Brain_Stim_Final_Layout.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.DRR
+DocumentPath=Project Outputs for Brain_Stimulator\Design Rule Check - Flyback.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.EXTREP
+DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.EXTREP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBL
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBS
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GKO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM1
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM13
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM15
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GPB
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GPT
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GPB
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTL
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GPT
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTS
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.LDP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.REP
+DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.REP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.REP
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.RUL
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.REP
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.RUL
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Gen_Test.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.TXT
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Gen_Test.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Keep-out.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Legend_Bot.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Legend_Top.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_1.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_13.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_15.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Pads_Bot.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Pads_Top.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Paste_Bot.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Paste_Top.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Profile.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Soldermask_Top.gbr
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Small_DDS_Breakout.DRR
+DocumentPath=Project Outputs for Brain_Stimulator\GerberX2\Gen_Test_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.EXTREP
+DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Small_DDS_Breakout.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBL
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBS
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument46]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GKO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument47]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM1
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument48]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM2
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument49]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM3
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM2
 DItemRevisionGUID=
 
 [GeneratedDocument50]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM5
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM3
 DItemRevisionGUID=
 
 [GeneratedDocument51]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM13
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM5
 DItemRevisionGUID=
 
 [GeneratedDocument52]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM15
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument53]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM16
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument54]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM20
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM16
 DItemRevisionGUID=
 
 [GeneratedDocument55]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM21
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM20
 DItemRevisionGUID=
 
 [GeneratedDocument56]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM23
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM21
 DItemRevisionGUID=
 
 [GeneratedDocument57]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM24
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM23
 DItemRevisionGUID=
 
 [GeneratedDocument58]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GPB
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GM24
 DItemRevisionGUID=
 
 [GeneratedDocument59]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GPT
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GPB
 DItemRevisionGUID=
 
 [GeneratedDocument60]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTL
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GPT
 DItemRevisionGUID=
 
 [GeneratedDocument61]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTO
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument62]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument63]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTS
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument64]
-DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Small_DDS_Breakout.LDP
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument65]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.REP
+DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Small_DDS_Breakout.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument66]
-DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.RUL
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.REP
 DItemRevisionGUID=
 
 [GeneratedDocument67]
+DocumentPath=Project Outputs for Brain_Stimulator\Gerber\Small_DDS_Breakout.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument68]
 DocumentPath=Project Outputs for Brain_Stimulator\NC Drill\Small_DDS_Breakout.TXT
 DItemRevisionGUID=
 
