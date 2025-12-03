@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\twsoc\ECE_455\ECE_455_Briain_Stimulator\PCB\Brain_Stimulator\Brain_Stim_Final_Layout.PcbDoc
 Date     : 11/19/2025
-Time     : 7:05:54 AM
+Time     : 3:02:40 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -58,4 +58,4 @@ Rule Violations :0
 
 Violations Detected : 4
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
