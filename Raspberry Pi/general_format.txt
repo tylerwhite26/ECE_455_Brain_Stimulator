@@ -1,0 +1,4 @@
+Set GP7 to 0
+make all programmable resistors 0
+Write clock generator
+write dds frequencies
