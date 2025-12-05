@@ -1,115 +1,100 @@
-from machine import Pin, SPI
-import time
-import bluetooth
-from ble_simple_peripheral import BLESimplePeripheral
+spi = SPIspi = SPI(1, baudrate=1_000_000, polarity=1, phase=1,
+             sck=Pin(14), mosi=Pin(15), miso=Pin(12))
 
-# Create a Bluetooth Low Energy (BLE) object
-ble = bluetooth.BLE()
-sp = BLESimplePeripheral(ble)
+# FSYNC pins for each AD9833 (active low chip select)
+# Each chip needs its own FSYNC pin
+fsync_pins = [
+    Pin(17, Pin.OUT),  # AD9833 #0
+    Pin(20, Pin.OUT),  # AD9833 #1
+    Pin(21, Pin.OUT),  # AD9833 #2
+    Pin(22, Pin.OUT)   # AD9833 #3
+]
 
-led = Pin("LED", Pin.OUT)
-led_state = 0
+# Initialize all FSYNC pins to idle high
+for pin in fsync_pins:
+    pin.value(1)
 
-# SPI0 setup
-spi = SPI(0, baudrate=1_000_000, polarity=0, phase=0,
-          sck=Pin(18), mosi=Pin(19), miso=Pin(16))
-cs = Pin(17, Pin.OUT)
-io_update = Pin(20, Pin.OUT)
-
-cs.value(1)
-io_update.value(0)
-
-# AD9959 Constants
-# Adjust these based on your system clock frequency
-SYSTEM_CLOCK = 50_000_000  # 50 MHz (adjust to your actual clock)
-
-def io_update_pulse():
-    io_update.value(1)
-    time.sleep_us(1)
-    io_update.value(0)
-
-def write_reg(addr, data_bytes):
-    instr = addr & 0x1F  # write operation
-    tx = bytearray([instr] + data_bytes)
-    cs.value(0)
+def write_word(channel, data):
+    """
+    Write 16-bit word to specified AD9833 channel
+    channel: 0-3 (which AD9833 chip to write to)
+    """
+    if channel < 0 or channel >= len(fsync_pins):
+        print(f"Error: Invalid channel {channel}")
+        return
+    
+    tx = bytearray([
+        (data >> 8) & 0xFF,
+        data & 0xFF
+    ])
+    print(tx)
+    fsync_pins[channel].value(0)  # FSYNC low to enable writing
     spi.write(tx)
-    cs.value(1)
-    io_update_pulse()
-    print("Sent:", [hex(x) for x in tx])
-
-def frequency_to_ftw(frequency):
-    """Convert frequency in Hz to Frequency Tuning Word (FTW) for AD9959"""
-    # FTW = (frequency / system_clock) * 2^32
-    ftw = int((frequency / SYSTEM_CLOCK) * (2**32))
-    return ftw
-
-def set_frequency(channel, frequency):
-    """Set the frequency for a specific channel (0-3)"""
-    ftw = frequency_to_ftw(frequency)
+    fsync_pins[channel].value(1)  # FSYNC high to latch data
+    time.sleep_us(1)
+    print(f"Ch{channel} Sent: {hex(data)}")
     
-    # Convert FTW to 4 bytes (big-endian)
-    ftw_bytes = [
-        (ftw >> 24) & 0xFF,
-        (ftw >> 16) & 0xFF,
-        (ftw >> 8) & 0xFF,
-        ftw & 0xFF
+def test(): # write to DDS
+    write_word(0, 0x2108)
+    write_word(0, 0x2008)
+    write_word(0, 0x5893)
+    write_word(0, 0x4010)
+
+#programmable resistors Pins
+pins = [
+    Pin(2, Pin.OUT),
+    Pin(3, Pin.OUT)
     ]
-    
-    # Channel Frequency Tuning Word register addresses
-    # Channel 0: 0x04, Channel 1: 0x05, Channel 2: 0x06, Channel 3: 0x07
-    ftw_addr = 0x04 + channel
-    
-    print(f"Setting channel {channel} to {frequency} Hz")
-    print(f"FTW: {hex(ftw)} -> {[hex(x) for x in ftw_bytes]}")
-    
-    write_reg(ftw_addr, ftw_bytes)
 
-def parse_frequency_data(data):
-    """Parse incoming BLE data for frequency commands"""
-    try:
-        # Convert bytes to string and strip whitespace
-        data_str = data.decode('utf-8').strip()
-        print(f"Parsed data: {data_str}")
+def increment(n):
+    pins[1].value(1)
+    pins[0].value(0) # CS low
+    
+    for i in range(n):
+        pins[1].value(0)
+        pins[1].value(1)
         
-        # Handle single frequency: "1000"
-        if ',' not in data_str:
-            freq = float(data_str)
-            set_frequency(0, freq)  # Set channel 0
-            return
-        
-        # Handle multiple frequencies: "1000,2000,3000,4000"
-        freqs = data_str.split(',')
-        for i, freq_str in enumerate(freqs):
-            if i < 4:  # Only set up to 4 channels
-                freq = float(freq_str.strip())
-                set_frequency(i, freq)
-            
-    except (ValueError, UnicodeDecodeError) as e:
-        print(f"Error parsing data: {e}")
+    pins[0].value(1) # CS high
+    
+def decrement(n):
+    pins[1].value(0)
+    pins[0].value(0) # CS low
+    
+    for i in range(n):
+        pins[1].value(1)
+        pins[1].value(0)
+    
+    pins[0].value(1) # CS high
 
-def on_rx(data):
-    """Callback function for incoming BLE data"""
-    print("Data received: ", data)
-    
-    global led_state
-    
-    # Handle single-byte commands
-    if data == b'T':
-        led.value(not led_state)
-        led_state = 1 - led_state
-        print("Light toggled")
-        return
-    
-    if data == b'W':
-        write_reg(0x01, [0x5A, 0x3A, 0xD0])
-        return
-    
-    # Handle frequency data (e.g., "1000\n" or "1000,2000\n")
-    parse_frequency_data(data)
 
-# Start an infinite loop
-print("BLE Peripheral started, waiting for connections...")
-while True:
-    if sp.is_connected():
-        sp.on_write(on_rx)
-    time.sleep(0.1)
+pins[0].value(1) #cs high
+decrement(64) #reset prorgammable resistor to 00h
+
+# Soft Kill
+while (pins[2] == 1) #when soft kill is off
+    increment(40)
+    test() # DDS
+    if(pins[2] == 0): #if soft kill is on
+        decrement(64)
+
+
+i2c = I2C(0, scl=Pin(1), sda=Pin(0), freq=400000)
+SI5351_ADDR = 0x60
+
+# Register configuration
+config = [
+    (2, 0x53), (3, 0x00), (4, 0x20), (7, 0x00), (15, 0x00),
+    (16, 0x0F), (17, 0x8C), (18, 0x8C), (19, 0x8C), (20, 0x8C),
+    (21, 0x8C), (22, 0x8C), (23, 0x8C), (26, 0x00), (27, 0x01),
+    (28, 0x00), (29, 0x0E), (30, 0x00), (31, 0x00), (32, 0x00),
+    (33, 0x00), (42, 0x00), (43, 0x01), (44, 0x23), (45, 0xE6),
+    (46, 0x00), (47, 0x00), (48, 0x00), (49, 0x00), (90, 0x00),
+    (91, 0x00), (149, 0x00), (150, 0x00), (151, 0x00), (152, 0x00),
+    (153, 0x00), (154, 0x00), (155, 0x00), (162, 0x00), (163, 0x00),
+    (164, 0x00), (165, 0x00), (183, 0x92)
+]
+
+# Write all registers
+for reg, data in config:
+    i2c.writeto(SI5351_ADDR, bytearray([reg, data]))
+    time.sleep_ms(1)
